@@ -39,7 +39,10 @@ app.delete("/api/notes/:id", function (req, res) {
   let notes = fs.readFileSync("db/db.json");
   let noteArray = JSON.parse(notes);
   let idToDelete = req.params.id;
-  let noteToDelete = noteArray.findIndex(obj => obj.id === idToDelete);
+  console.log(idToDelete);
+
+  let noteToDelete = noteArray.findIndex(obj => obj.id === parseInt(idToDelete));
+  console.log(noteToDelete);
 
   noteArray.splice(noteToDelete, 1);
   fs.writeFileSync("db/db.json", JSON.stringify(noteArray));

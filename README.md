@@ -11,11 +11,19 @@ This is a note taking app. It takes user inputs and creates note objects and sto
     express
     
 ## Installation
+
 ```
 npm install
 ```
 
+## Initializing
+
+```
+npm start
+```
+
 ## Testing
+
 ```
 no tests
 ```
